@@ -9,21 +9,22 @@ import java.util.Locale
 class LanguageContextWrapper(base: Context?) : ContextWrapper(base) {
 
     companion object {
-        fun wrap(context: Context, newLocale: Locale): ContextWrapper {
+        fun wrap(context: Context?, newLocale: Locale): LanguageContextWrapper {
             var mContext = context
-            val res = mContext.resources
-            val configuration = res.configuration
+            mContext?.let { ctx ->
+                val res = ctx.resources
+                val configuration = res.configuration
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                configuration.setLocale(newLocale)
-                val localeList = LocaleList(newLocale)
-                LocaleList.setDefault(localeList)
-                mContext = mContext.createConfigurationContext(configuration)
-            } else {
-                configuration.locale = newLocale
-                res.updateConfiguration(configuration, res.displayMetrics)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    configuration.setLocale(newLocale)
+                    val localeList = LocaleList(newLocale)
+                    LocaleList.setDefault(localeList)
+                    mContext = ctx.createConfigurationContext(configuration)
+                } else {
+                    configuration.locale = newLocale
+                    res.updateConfiguration(configuration, res.displayMetrics)
+                }
             }
-
             return LanguageContextWrapper(mContext)
         }
     }
