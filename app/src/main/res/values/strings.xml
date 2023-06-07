@@ -2,4 +2,6 @@
     <string name="app_name">App Language</string>
     <string name="info_language">This app is available in english and indonesian language, change language settings below.</string>
     <string name="settings">Settings</string>
+    <string name="language">English</string>
+    <string name="change_laguage">Change Language</string>
 </resources>
