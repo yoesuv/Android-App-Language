@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">App Bahasa</string>
+    <string name="info_language">Aplikasi ini tersedia dalam bahasa indonesia dan inggris, ganti bahasa dengan pengaturan dibawah.</string>
+    <string name="settings">Pengaturan</string>
+    <string name="language">Inggris</string>
+    <string name="change_laguage">Ganti Bahasa</string>
+    <string name="indonesia">Indonesia</string>
+</resources>
