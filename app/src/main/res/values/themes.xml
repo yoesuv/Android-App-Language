@@ -6,4 +6,19 @@
     </style>
 
     <style name="Theme.AppLanguage" parent="Base.Theme.AppLanguage" />
+
+    <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorSurface">@color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.Rounded</item>
+    </style>
+
+    <style name="MaterialAlertDialog.Rounded" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialAlertDialog.Rounded</item>
+    </style>
+
+    <style name="ShapeAppearance.MaterialAlertDialog.Rounded" parent="">
+        <item name="cornerSize">16dp</item>
+    </style>
+
 </resources>

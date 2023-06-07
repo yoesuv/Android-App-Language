@@ -70,6 +70,7 @@
                 android:textSize="16sp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChangeLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"

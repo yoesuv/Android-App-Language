@@ -19,11 +19,18 @@ class MainActivity : AppCompatActivity() {
         binding.main = viewModel
 
         setupToolbar()
+        setupButton()
     }
 
     private fun setupToolbar() {
         setSupportActionBar(binding.toolbarMain)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+
+    private fun setupButton() {
+        binding.btnChangeLanguage.setOnClickListener {
+            viewModel.changeLanguage(this)
+        }
     }
 
 }
