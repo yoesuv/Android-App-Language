@@ -17,6 +17,7 @@ class MainActivity : BaseActivity() {
         binding.lifecycleOwner = this
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         binding.main = viewModel
+        viewModel.setup(this)
 
         setupToolbar()
         setupButton()
