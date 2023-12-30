@@ -1,7 +1,7 @@
 ## App Language ##
 
 Android app with multiple languages support.  
-Download apk file [here](https://www.dropbox.com/s/xruuz4l84ocor2q)
+Download apk file [here](https://e.pcloud.link/publink/show?code=XZrOO1Z22hPx3EpM2JpTrk10g5bXBxOAjAy)
 
 #### Screenshots ####
 | English | Indonesia | Dialog |
