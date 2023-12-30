@@ -6,4 +6,8 @@
         <item name="android:windowBackground">@color/black</item>
     </style>
 
+    <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.Rounded</item>
+    </style>
+
 </resources>
