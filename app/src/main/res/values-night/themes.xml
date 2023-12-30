@@ -2,6 +2,12 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AppLanguage" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/teal</item>
+        <item name="android:windowBackground">@color/black</item>
     </style>
+
+    <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.Rounded</item>
+    </style>
+
 </resources>
