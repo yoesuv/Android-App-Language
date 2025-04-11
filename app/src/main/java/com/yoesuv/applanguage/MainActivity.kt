@@ -1,6 +1,8 @@
 package com.yoesuv.applanguage
 
+import android.graphics.Color
 import android.os.Bundle
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -17,7 +19,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
 
         if (AppHelper.isVanillaIceCreamAndUp()) {
-            enableEdgeToEdge()
+            enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT))
         }
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
