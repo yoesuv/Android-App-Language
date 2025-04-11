@@ -1,15 +1,15 @@
 [versions]
-agp = "8.6.1"
-kotlin = "1.9.21"
-coreKtx = "1.13.1"
+agp = "8.8.2"
+kotlin = "1.9.24"
+coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
-constraintlayout = "2.1.4"
-ksp = "1.9.21-1.0.16"
-viewmodel = "2.8.6"
+constraintlayout = "2.2.1"
+ksp = "1.9.24-1.0.20"
+viewmodel = "2.8.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
