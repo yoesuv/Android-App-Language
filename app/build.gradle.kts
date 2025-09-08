@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace = "com.yoesuv.applanguage"
-    compileSdk  = 35
+    compileSdk  = 36
 
     defaultConfig {
         applicationId = "com.yoesuv.applanguage"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
-        versionName  = "1.0.3"
+        versionName  = "1.0.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         setProperty("archivesBaseName", "$applicationId-v$versionCode($versionName)")
