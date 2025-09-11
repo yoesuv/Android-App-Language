@@ -2,15 +2,15 @@ package com.yoesuv.applanguage
 
 import android.graphics.Color
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.yoesuv.applanguage.databinding.ActivityMainBinding
 import com.yoesuv.applanguage.utils.AppHelper
-import com.yoesuv.applanguage.utils.BaseActivity
-
-class MainActivity : BaseActivity() {
+ 
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainViewModel
