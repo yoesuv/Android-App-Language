@@ -7,13 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 object AppHelper {
-
-    fun isVanillaIceCreamAndUp(): Boolean {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM
-    }
+    fun isVanillaIceCreamAndUp(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM
 
     fun insetsPadding(
-        view: View, left: Boolean = false,
+        view: View,
+        left: Boolean = false,
         top: Boolean = false,
         right: Boolean = false,
         bottom: Boolean = false,
@@ -25,7 +23,7 @@ object AppHelper {
                 if (left) inset.left else v.paddingLeft,
                 if (top) inset.top else v.paddingTop,
                 if (right) inset.right else v.paddingRight,
-                if (bottom) inset.bottom + 32 else v.paddingBottom
+                if (bottom) inset.bottom + 32 else v.paddingBottom,
             )
             color?.let {
                 v.setBackgroundColor(it)
@@ -33,5 +31,4 @@ object AppHelper {
             windowInset
         }
     }
-
 }

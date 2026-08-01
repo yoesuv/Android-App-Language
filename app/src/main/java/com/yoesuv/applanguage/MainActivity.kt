@@ -2,16 +2,15 @@ package com.yoesuv.applanguage
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.yoesuv.applanguage.databinding.ActivityMainBinding
 import com.yoesuv.applanguage.utils.AppHelper
- 
-class MainActivity : AppCompatActivity() {
 
+class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainViewModel
 
@@ -47,5 +46,4 @@ class MainActivity : AppCompatActivity() {
             viewModel.changeLanguage(this)
         }
     }
-
 }
