@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
 import com.yoesuv.applanguage.utils.PreferencesHelper
 
-class MyApp: Application() {
-
+class MyApp : Application() {
     companion object {
         var prefHelper: PreferencesHelper? = null
     }
@@ -19,5 +18,4 @@ class MyApp: Application() {
         val locales = LocaleListCompat.forLanguageTags(savedTag)
         AppCompatDelegate.setApplicationLocales(locales)
     }
-
 }

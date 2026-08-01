@@ -8,8 +8,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.yoesuv.applanguage.utils.dialogChangeLanguage
 
-class MainViewModel(application: Application) : AndroidViewModel(application) {
-
+class MainViewModel(
+    application: Application,
+) : AndroidViewModel(application) {
     var title = MutableLiveData("")
 
     fun setup(activity: Activity) {
@@ -29,5 +30,4 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(tag))
         })
     }
-
 }

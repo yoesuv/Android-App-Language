@@ -1,28 +1,30 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
-    id("com.google.devtools.ksp")
 }
 
 android {
     namespace = "com.yoesuv.applanguage"
-    compileSdk  = 36
+    compileSdk {
+        version =
+            release(36) {
+                minorApiLevel = 1
+            }
+    }
 
     defaultConfig {
         applicationId = "com.yoesuv.applanguage"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
-        versionName  = "1.0.4"
+        versionName = "1.0.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        setProperty("archivesBaseName", "$applicationId-v$versionCode($versionName)")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -30,12 +32,19 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
     buildFeatures {
         dataBinding = true
         buildConfig = true
+    }
+}
+
+androidComponents {
+    onVariants { variant ->
+        variant.outputs.forEach { output ->
+            val appId = variant.applicationId.get()
+            val versionName = output.versionName.get()
+            output.outputFileName.set("$appId-v$versionName.apk")
+        }
     }
 }
 
